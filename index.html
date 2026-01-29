@@ -4,149 +4,71 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Checkday — Support</title>
-  <meta name="description" content="Support page for the Checkday app." />
+  <meta name="description" content="Support contact for the Checkday app." />
   <style>
-    :root {
-      --bg: #f2f2f7;
-      --card: #ffffff;
-      --text: #111827;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-      --link: #2563eb;
-      --ok: #16a34a;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0b0b0f;
-        --card: #14141a;
-        --text: #e5e7eb;
-        --muted: #9ca3af;
-        --border: #27272a;
-        --link: #60a5fa;
-        --ok: #22c55e;
-      }
-    }
-    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    header, main, footer { max-width: 900px; margin: 0 auto; }
-    header { padding: 32px 16px 12px; }
-    h1 { margin: 0; font-size: 28px; letter-spacing: -0.02em; }
-    .sub { margin-top: 8px; color: var(--muted); font-size: 14px; }
-    main { padding: 0 16px 40px; }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-      margin-top: 14px;
-    }
-    @media (min-width: 820px) {
-      .grid { grid-template-columns: 1fr 1fr; }
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-    }
-    h2 { margin: 0 0 10px; font-size: 18px; letter-spacing: -0.01em; }
-    p, li { color: var(--muted); font-size: 15px; }
-    ul { margin: 8px 0 0 18px; padding: 0; }
-    a { color: var(--link); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
-    .badge {
-      display: inline-flex;
+      background: #f2f2f7;
+      color: #111827;
+      display: flex;
       align-items: center;
-      gap: 8px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(0,0,0,0.02);
-      color: var(--muted);
-      font-size: 13px;
+      justify-content: center;
+      min-height: 100vh;
     }
     @media (prefers-color-scheme: dark) {
-      .badge { background: rgba(255,255,255,0.03); }
+      body {
+        background: #0b0b0f;
+        color: #e5e7eb;
+      }
     }
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      background: var(--ok);
-      display: inline-block;
+    .card {
+      background: #ffffff;
+      padding: 28px 32px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      max-width: 420px;
+      width: calc(100% - 32px);
     }
-    footer {
-      padding: 10px 16px 40px;
-      color: var(--muted);
-      font-size: 12px;
+    @media (prefers-color-scheme: dark) {
+      .card {
+        background: #14141a;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      }
     }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 22px;
+    }
+    p {
+      margin: 8px 0;
+      color: #6b7280;
+      font-size: 15px;
+    }
+    @media (prefers-color-scheme: dark) {
+      p { color: #9ca3af; }
+    }
+    a {
+      color: #2563eb;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-  <header>
+  <div class="card">
     <h1>Support</h1>
-    <div class="sub">Need help with Checkday? Contact us and we’ll get back to you.</div>
-    <div style="margin-top:12px" class="badge"><span class="dot"></span>Email support available</div>
-  </header>
-
-  <main>
-    <section class="card">
-      <h2>Contact</h2>
-      <p>Email us anytime:</p>
-      <p class="mono">
-        <a href="mailto:ali.itech.company@gmail.com">ali.itech.company@gmail.com</a>
-      </p>
-      <p>When possible, include:</p>
-      <ul>
-        <li>Device model</li>
-        <li>iOS version</li>
-        <li>App version</li>
-        <li>Short description of the issue</li>
-      </ul>
-    </section>
-
-    <div class="grid">
-      <section class="card">
-        <h2>FAQ</h2>
-        <ul>
-          <li><b>Calendar not showing?</b> Enable access in iOS Settings → Privacy &amp; Security → Calendars.</li>
-          <li><b>Meeting transcription not working?</b> Allow Microphone and Speech Recognition permissions.</li>
-          <li><b>AI summaries</b> run only when you explicitly request them.</li>
-          <li><b>Subscriptions</b> are managed by Apple via the App Store.</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h2>Privacy</h2>
-        <p>
-          Checkday works primarily on-device. If you request an AI summary, meeting transcript text is sent
-          to OpenAI’s API for processing. We do not store user data on our servers.
-        </p>
-      </section>
-    </div>
-
-    <section class="card">
-      <h2>Note for App Review</h2>
-      <p>
-        This page provides a direct support contact for Checkday users. Privacy practices are explained
-        in the Privacy Policy available on our GitHub Pages site.
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    © <span id="year"></span> Checkday. All rights reserved.
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    <p>
+      For any questions or issues, please email us at:
+    </p>
+    <p>
+      <a href="mailto:ali.itech.company@gmail.com">ali.itech.company@gmail.com</a>
+    </p>
+    <p>
+      We typically respond within <b>24–48 hours</b>.
+    </p>
+  </div>
 </body>
 </html>
